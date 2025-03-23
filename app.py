@@ -32,7 +32,7 @@ last_translation = {
     'adjusted_scores': None,
     'timestamp': None
 }
-client = MongoClient("mongodb+srv://stark:Murali123@cluster0.qq2ou.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient(os.getenv('DB_CONNECTION_STRING'))
 db = client['Translation_Samples']
 collection = db['Few_shot_samples']
 
